@@ -1,5 +1,7 @@
 
 import './App.css'
+import {puppyList} from './data.js'
+import { useState } from 'react'
 
 function App() {
 
@@ -12,6 +14,13 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+        
+          { 
+            puppies.map((puppy) => {
+              return <p>{puppy.name}</p>
+            })
+         }
+        
       </div>
     </>
   )
